@@ -8,7 +8,7 @@ The advisory team uses the tables to answer three questions. Which town had the 
 
 The pipeline has completed full backfills for the five default towns. `logs/pipeline.log` holds the run history. A second run on the same day rereads only the three-day late window and adds no duplicate rows. The delete-and-reload test below checks that watermarks select the right dates.
 
-The GitHub repository is `MghongoDev/kenya_weather_pipeline`. The acceptance checks below are the verification path.
+The acceptance checks below are the verification path.
 
 ## Cost
 
@@ -44,7 +44,7 @@ You need Python 3.10 or newer, a PostgreSQL database, and internet access.
    python pipeline.py
    ```
 
-The first run loads every day from 1 January 2025 through five days before today. A second run on the same day loads nothing and duplicates nothing. Open-Meteo is free for non-commercial use and needs no API key.
+The first run loads every day from 1 January 2025 through five days before today. A second run on the same day loads nothing and duplicates nothing. 
 
 ## Layout
 
